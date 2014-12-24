@@ -1,12 +1,6 @@
 require 'typhoeus'
 require 'json'
 module Verbalizeit
-  class UnknownEnvironmentError < StandardError
-  end
-
-  class UnauthorizedError < StandardError
-  end
-
   class Client
 
     attr_reader :languages
@@ -26,7 +20,7 @@ module Verbalizeit
         parsed_body = JSON.parse(response.body)
         parsed_body.map { |language| Language.new(language) }
       elsif response.code == 401
-        raise UnauthorizedError
+        raise Error::Unauthorized
       end
     end
 
@@ -41,7 +35,7 @@ module Verbalizeit
         when :production
           "https://api.verbalizeit.com/v2/"
         else
-          raise UnknownEnvironmentError, "you may specify :staging or :production"
+          raise Error::UnknownEnvironment, "you may specify :staging or :production"
       end
     end
 

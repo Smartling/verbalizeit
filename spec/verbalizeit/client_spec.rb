@@ -8,12 +8,12 @@ describe Verbalizeit::Client do
 
     it 'raises Verbalizeit::Error::Unauthenticated if api key is invalid' do
       VCR.use_cassette('client/unauthorized') do
-        expect { Verbalizeit::Client.new(12345, :staging) }.to raise_error(Verbalizeit::UnauthorizedError)
+        expect { Verbalizeit::Client.new(12345, :staging) }.to raise_error(Verbalizeit::Error::Unauthorized)
       end
     end
 
     it 'raises Verbalizeit::Error:UnknownEnvironment if the environment is unknown' do
-      expect { Verbalizeit::Client.new(staging_api_key, :foo) }.to raise_error(Verbalizeit::UnknownEnvironmentError)
+      expect { Verbalizeit::Client.new(staging_api_key, :foo) }.to raise_error(Verbalizeit::Error::UnknownEnvironment)
     end
 
     it 'authenticates the user and fetches the language list' do
