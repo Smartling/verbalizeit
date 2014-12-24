@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stagingapi.verbalizeit.com/v2/languages
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Key:
+      - '12345'
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 24 Dec 2014 00:17:15 GMT
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 401 Unauthorized
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - b2b223340b6c0c78787bfcf28d64bf34
+      X-Runtime:
+      - '0.016598'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Wed, 24 Dec 2014 00:17:15 GMT
+recorded_with: VCR 2.9.3

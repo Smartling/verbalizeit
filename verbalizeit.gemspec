@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nathanael Burt"]
   spec.email         = ["nathanael.burt@gmail.com"]
   spec.summary       = %q{Wrapper for VerbalizeIt's V2 API.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.description   = ""
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,9 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec", "~> 3.1.0"
+  spec.add_development_dependency "webmock", "~> 1.20.4"
+  spec.add_development_dependency "vcr", "~> 2.9.3"
+  spec.add_development_dependency "dotenv", "~> 1.0.2"
+  spec.add_development_dependency "typhoeus", "~> 0.6.9"
 end
