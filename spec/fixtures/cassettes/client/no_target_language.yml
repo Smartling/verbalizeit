@@ -1,0 +1,186 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stagingapi.verbalizeit.com/v2/languages
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Key:
+      - "<API KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 24 Dec 2014 13:59:30 GMT
+      Etag:
+      - '"6ed3f7edbf0ed0cbba041a3932fd237c"'
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Set-Cookie:
+      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTAwMzc5NTcyNzY4NDRjNmM1Mzk5ZWYwMGMwNGE3NGFkBjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--7d7773b15476b09391d5478a0e2c71863c73763e;
+        domain=.verbalizeit.com; path=/
+      Status:
+      - 200 OK
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 9c967c02d60028da1b9fbf430d6c8c32
+      X-Runtime:
+      - '0.318635'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '3254'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkVuZ2xpc2giLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImVu
+        Zy1VUyJ9LHsibmFtZSI6IkFmcmlrYWFucyIsImxhbmd1YWdlX3JlZ2lvbl9j
+        b2RlIjoiYWZyLVpBIn0seyJuYW1lIjoiQXJhYmljIiwibGFuZ3VhZ2VfcmVn
+        aW9uX2NvZGUiOiJhcmEtQUUifSx7Im5hbWUiOiJCb2ttw6VsIiwibGFuZ3Vh
+        Z2VfcmVnaW9uX2NvZGUiOiJub2ItTk8ifSx7Im5hbWUiOiJCb3NuaWFuIiwi
+        bGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJib3MtQkEifSx7Im5hbWUiOiJCdWxn
+        YXJpYW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImJ1bC1CRyJ9LHsibmFt
+        ZSI6IkNhdGFsYW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImNhdC1FUyJ9
+        LHsibmFtZSI6IkNyb2F0aWFuIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJo
+        cnYtSFIifSx7Im5hbWUiOiJDemVjaCIsImxhbmd1YWdlX3JlZ2lvbl9jb2Rl
+        IjoiY2VzLUNaIn0seyJuYW1lIjoiRGFuaXNoIiwibGFuZ3VhZ2VfcmVnaW9u
+        X2NvZGUiOiJkYW4tREsifSx7Im5hbWUiOiJEYXJpIiwibGFuZ3VhZ2VfcmVn
+        aW9uX2NvZGUiOiJwcnMtQUYifSx7Im5hbWUiOiJEdXRjaCIsImxhbmd1YWdl
+        X3JlZ2lvbl9jb2RlIjoiZHV0LU5MIn0seyJuYW1lIjoiRW5nbGlzaCAoQXVz
+        dHJhbGlhKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiZW5nLUFVIn0seyJu
+        YW1lIjoiRW5nbGlzaCAoQ2FuYWRhKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2Rl
+        IjoiZW5nLUNBIn0seyJuYW1lIjoiRW5nbGlzaCAoVUspIiwibGFuZ3VhZ2Vf
+        cmVnaW9uX2NvZGUiOiJlbmctR0IifSx7Im5hbWUiOiJFc3RvbmlhbiIsImxh
+        bmd1YWdlX3JlZ2lvbl9jb2RlIjoiZXN0LUVFIn0seyJuYW1lIjoiRmFyc2ki
+        LCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImZhcy1JUiJ9LHsibmFtZSI6IkZp
+        bm5pc2giLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImZpbi1GSSJ9LHsibmFt
+        ZSI6IkZyZW5jaCIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiZnJhLUZSIn0s
+        eyJuYW1lIjoiRnJlbmNoIChDYW5hZGEpIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJmcmEtQ0EifSx7Im5hbWUiOiJHZXJtYW4iLCJsYW5ndWFnZV9yZWdp
+        b25fY29kZSI6ImRldS1ERSJ9LHsibmFtZSI6Ikdlcm1hbiAoU3dpdHplcmxh
+        bmQpIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJkZXUtQ0gifSx7Im5hbWUi
+        OiJHcmVlayIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiZWxsLUdSIn0seyJu
+        YW1lIjoiSGVicmV3IiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJoZWItSUwi
+        fSx7Im5hbWUiOiJIaW5kaSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiaGlu
+        LUlOIn0seyJuYW1lIjoiSHVuZ2FyaWFuIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJodW4tSFUifSx7Im5hbWUiOiJJbmRvbmVzaWFuIiwibGFuZ3VhZ2Vf
+        cmVnaW9uX2NvZGUiOiJpbmQtSUQifSx7Im5hbWUiOiJJdGFsaWFuIiwibGFu
+        Z3VhZ2VfcmVnaW9uX2NvZGUiOiJpdGEtSVQifSx7Im5hbWUiOiJKYXBhbmVz
+        ZSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoianBuLUpQIn0seyJuYW1lIjoi
+        S2FubmFkYSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoia2FuLUlOIn0seyJu
+        YW1lIjoiS2F6YWtoIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJrYXotS1oi
+        fSx7Im5hbWUiOiJLb3JlYW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Imtv
+        ci1LUiJ9LHsibmFtZSI6IkxhdHZpYW4iLCJsYW5ndWFnZV9yZWdpb25fY29k
+        ZSI6Imxhdi1MViJ9LHsibmFtZSI6IkxpdGh1YW5pYW4iLCJsYW5ndWFnZV9y
+        ZWdpb25fY29kZSI6ImxpdC1MVCJ9LHsibmFtZSI6Ik1hbmRhcmluIiwibGFu
+        Z3VhZ2VfcmVnaW9uX2NvZGUiOiJjbW4tQ04ifSx7Im5hbWUiOiJOb3J3ZWdp
+        YW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Im5vci1OTyJ9LHsibmFtZSI6
+        Ik55bm9yc2siLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Im5uby1OTyJ9LHsi
+        bmFtZSI6IlBhc2h0byIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoicHVzLUFG
+        In0seyJuYW1lIjoiUG9saXNoIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJw
+        b2wtUEwifSx7Im5hbWUiOiJQb3J0dWd1ZXNlIiwibGFuZ3VhZ2VfcmVnaW9u
+        X2NvZGUiOiJwb3ItUFQifSx7Im5hbWUiOiJQb3J0dWd1ZXNlIChCcmF6aWwp
+        IiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJwb3ItQlIifSx7Im5hbWUiOiJQ
+        dW5qYWJpIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJwYW4tSU4ifSx7Im5h
+        bWUiOiJSb21hbmlhbiIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoicm9uLVJP
+        In0seyJuYW1lIjoiUnVzc2lhbiIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoi
+        cnVzLVJVIn0seyJuYW1lIjoiU2VyYmlhbiIsImxhbmd1YWdlX3JlZ2lvbl9j
+        b2RlIjoic3JwLVNQIn0seyJuYW1lIjoiU2xvdmFrIiwibGFuZ3VhZ2VfcmVn
+        aW9uX2NvZGUiOiJzbG8tU0sifSx7Im5hbWUiOiJTbG92ZW5pYW4iLCJsYW5n
+        dWFnZV9yZWdpb25fY29kZSI6InNsdi1TSSJ9LHsibmFtZSI6IlNwYW5pc2gi
+        LCJsYW5ndWFnZV9yZWdpb25fY29kZSI6InNwYS1FUyJ9LHsibmFtZSI6IlNw
+        YW5pc2ggKExhdGluIEFtZXJpY2EpIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUi
+        OiJzcGEtWEwifSx7Im5hbWUiOiJTcGFuaXNoIChNZXhpY28pIiwibGFuZ3Vh
+        Z2VfcmVnaW9uX2NvZGUiOiJzcGEtTVgifSx7Im5hbWUiOiJTd2FoaWxpIiwi
+        bGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJzd2EtS0UifSx7Im5hbWUiOiJTd2Vk
+        aXNoIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJzd2UtU0UifSx7Im5hbWUi
+        OiJUYWdhbG9nIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJ0Z2wtUEgifSx7
+        Im5hbWUiOiJUYW1pbCIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoidGFtLUlO
+        In0seyJuYW1lIjoiVGhhaSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoidGhh
+        LVRIIn0seyJuYW1lIjoiVHJhZGl0aW9uYWwgQ2hpbmVzZSIsImxhbmd1YWdl
+        X3JlZ2lvbl9jb2RlIjoiemhvLUNOIn0seyJuYW1lIjoiVHJhZGl0aW9uYWwg
+        Q2hpbmVzZSAoSG9uZyBLb25nKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoi
+        emhvLUhLIn0seyJuYW1lIjoiVHJhZGl0aW9uYWwgQ2hpbmVzZSAoVGFpd2Fu
+        KSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiemhvLVRXIn0seyJuYW1lIjoi
+        VHVya2lzaCIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoidHVyLVRSIn0seyJu
+        YW1lIjoiVWtyYWluaWFuIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJ1a3It
+        VUEifSx7Im5hbWUiOiJWaWV0bmFtZXNlIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJ2aWUtVk4ifV0=
+    http_version: 
+  recorded_at: Wed, 24 Dec 2014 13:59:30 GMT
+- request:
+    method: post
+    uri: https://stagingapi.verbalizeit.com/v2/tasks
+    body:
+      encoding: UTF-8
+      string: file=%23%3CFile%3A0x007fa4a1ade768%3E&operation=text_translation&source_language=eng-US&target_language=
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Key:
+      - "<API KEY>"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 24 Dec 2014 13:59:31 GMT
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Set-Cookie:
+      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTg5OWU1MzQ3ZDJkZDhlMTIwMjc2Njc5MmRiZjI4ZWEwBjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--52317764f90742bcf9d4b7976effb2bc461a2fbe;
+        domain=.verbalizeit.com; path=/
+      Status:
+      - 400 Bad Request
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 993f700ee971e5387d62334bbb70397b
+      X-Runtime:
+      - '1.158215'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '60'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"target_language":["Not a valid language code"]}}'
+    http_version: 
+  recorded_at: Wed, 24 Dec 2014 13:59:31 GMT
+recorded_with: VCR 2.9.3

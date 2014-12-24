@@ -1,7 +1,6 @@
-# require "rubygems"
-# require "bundler/setup"
 require 'vcr'
 require 'webmock/rspec'
+require 'pry'
 require 'verbalizeit'
 require 'dotenv'
 Dotenv.load

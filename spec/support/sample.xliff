@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff>
+  <file>
+    <body>
+      <trans-unit>
+        <source>VerbalizeIt</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit>
+        <source>Check out this content.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit>
+        <source>
+          Here is some more source content
+        </source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

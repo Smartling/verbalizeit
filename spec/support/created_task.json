@@ -1,0 +1,30 @@
+{
+  "id": "TX1234",
+  "url": "http://www.verbalizeit.com/v2/tasks/TCAAA",
+  "status": "complete",
+  "rush_order": false,
+  "project_name": "Marketing Materials",
+  "source_language": "eng-US",
+  "target_language": "spa-ES",
+  "price_currency": "usd",
+  "price_amount": 11.22,
+  "due_at": "2014-10-13T11:56:02-04:00",
+  "completed_at": "2014-10-09T12:11:06-04:00",
+  "created_at": "2014-10-09T11:56:02-04:00",
+  "operation": "text_translation",
+  "download_url": "https://api.verbalizeit.com/v2/tasks/TX1234/completed_file",
+  "source_download_url": "https://api.verbalizeit.com/v2/tasks/TX1234/source_file",
+  "source_filename": "marketing_materials.docx",
+  "unit_count": 66,
+  "unit_type": "word",
+  "translation_units": 16,
+  "translation_units_complete": 16,
+  "translator":{
+    "name": "Jenny S.",
+    "avatar": "http://assets.verbalizeit.com/translator.jpg"
+  },
+  "reviewer":{
+    "name": "Stephen D.",
+    "avatar": "http://assets.verbalizeit.com/revewier.jpg"
+  }
+}

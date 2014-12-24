@@ -5,5 +5,8 @@ module Verbalizeit
 
     class Unauthorized < StandardError
     end
+
+    class BadRequest < StandardError
+    end
   end
 end

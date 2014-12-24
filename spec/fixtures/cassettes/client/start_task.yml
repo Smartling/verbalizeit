@@ -1,0 +1,192 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stagingapi.verbalizeit.com/v2/languages
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      x-api-key:
+      - "<API KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 24 Dec 2014 23:35:29 GMT
+      ETag:
+      - '"6ed3f7edbf0ed0cbba041a3932fd237c"'
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Set-Cookie:
+      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFmMDIzNTdmN2JlMjZkMjU4M2QwYmI2NmZlZTk3MWYxBjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--8a355f0bbda5143151f77e97042f790ecc4db8a6;
+        domain=.verbalizeit.com; path=/
+      Status:
+      - 200 OK
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - e58ada82b05efe0e4c0fb9bbba1f80bc
+      X-Runtime:
+      - '0.603392'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '3254'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkVuZ2xpc2giLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImVu
+        Zy1VUyJ9LHsibmFtZSI6IkFmcmlrYWFucyIsImxhbmd1YWdlX3JlZ2lvbl9j
+        b2RlIjoiYWZyLVpBIn0seyJuYW1lIjoiQXJhYmljIiwibGFuZ3VhZ2VfcmVn
+        aW9uX2NvZGUiOiJhcmEtQUUifSx7Im5hbWUiOiJCb2ttw6VsIiwibGFuZ3Vh
+        Z2VfcmVnaW9uX2NvZGUiOiJub2ItTk8ifSx7Im5hbWUiOiJCb3NuaWFuIiwi
+        bGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJib3MtQkEifSx7Im5hbWUiOiJCdWxn
+        YXJpYW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImJ1bC1CRyJ9LHsibmFt
+        ZSI6IkNhdGFsYW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImNhdC1FUyJ9
+        LHsibmFtZSI6IkNyb2F0aWFuIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJo
+        cnYtSFIifSx7Im5hbWUiOiJDemVjaCIsImxhbmd1YWdlX3JlZ2lvbl9jb2Rl
+        IjoiY2VzLUNaIn0seyJuYW1lIjoiRGFuaXNoIiwibGFuZ3VhZ2VfcmVnaW9u
+        X2NvZGUiOiJkYW4tREsifSx7Im5hbWUiOiJEYXJpIiwibGFuZ3VhZ2VfcmVn
+        aW9uX2NvZGUiOiJwcnMtQUYifSx7Im5hbWUiOiJEdXRjaCIsImxhbmd1YWdl
+        X3JlZ2lvbl9jb2RlIjoiZHV0LU5MIn0seyJuYW1lIjoiRW5nbGlzaCAoQXVz
+        dHJhbGlhKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiZW5nLUFVIn0seyJu
+        YW1lIjoiRW5nbGlzaCAoQ2FuYWRhKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2Rl
+        IjoiZW5nLUNBIn0seyJuYW1lIjoiRW5nbGlzaCAoVUspIiwibGFuZ3VhZ2Vf
+        cmVnaW9uX2NvZGUiOiJlbmctR0IifSx7Im5hbWUiOiJFc3RvbmlhbiIsImxh
+        bmd1YWdlX3JlZ2lvbl9jb2RlIjoiZXN0LUVFIn0seyJuYW1lIjoiRmFyc2ki
+        LCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImZhcy1JUiJ9LHsibmFtZSI6IkZp
+        bm5pc2giLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImZpbi1GSSJ9LHsibmFt
+        ZSI6IkZyZW5jaCIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiZnJhLUZSIn0s
+        eyJuYW1lIjoiRnJlbmNoIChDYW5hZGEpIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJmcmEtQ0EifSx7Im5hbWUiOiJHZXJtYW4iLCJsYW5ndWFnZV9yZWdp
+        b25fY29kZSI6ImRldS1ERSJ9LHsibmFtZSI6Ikdlcm1hbiAoU3dpdHplcmxh
+        bmQpIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJkZXUtQ0gifSx7Im5hbWUi
+        OiJHcmVlayIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiZWxsLUdSIn0seyJu
+        YW1lIjoiSGVicmV3IiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJoZWItSUwi
+        fSx7Im5hbWUiOiJIaW5kaSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiaGlu
+        LUlOIn0seyJuYW1lIjoiSHVuZ2FyaWFuIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJodW4tSFUifSx7Im5hbWUiOiJJbmRvbmVzaWFuIiwibGFuZ3VhZ2Vf
+        cmVnaW9uX2NvZGUiOiJpbmQtSUQifSx7Im5hbWUiOiJJdGFsaWFuIiwibGFu
+        Z3VhZ2VfcmVnaW9uX2NvZGUiOiJpdGEtSVQifSx7Im5hbWUiOiJKYXBhbmVz
+        ZSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoianBuLUpQIn0seyJuYW1lIjoi
+        S2FubmFkYSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoia2FuLUlOIn0seyJu
+        YW1lIjoiS2F6YWtoIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJrYXotS1oi
+        fSx7Im5hbWUiOiJLb3JlYW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Imtv
+        ci1LUiJ9LHsibmFtZSI6IkxhdHZpYW4iLCJsYW5ndWFnZV9yZWdpb25fY29k
+        ZSI6Imxhdi1MViJ9LHsibmFtZSI6IkxpdGh1YW5pYW4iLCJsYW5ndWFnZV9y
+        ZWdpb25fY29kZSI6ImxpdC1MVCJ9LHsibmFtZSI6Ik1hbmRhcmluIiwibGFu
+        Z3VhZ2VfcmVnaW9uX2NvZGUiOiJjbW4tQ04ifSx7Im5hbWUiOiJOb3J3ZWdp
+        YW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Im5vci1OTyJ9LHsibmFtZSI6
+        Ik55bm9yc2siLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Im5uby1OTyJ9LHsi
+        bmFtZSI6IlBhc2h0byIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoicHVzLUFG
+        In0seyJuYW1lIjoiUG9saXNoIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJw
+        b2wtUEwifSx7Im5hbWUiOiJQb3J0dWd1ZXNlIiwibGFuZ3VhZ2VfcmVnaW9u
+        X2NvZGUiOiJwb3ItUFQifSx7Im5hbWUiOiJQb3J0dWd1ZXNlIChCcmF6aWwp
+        IiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJwb3ItQlIifSx7Im5hbWUiOiJQ
+        dW5qYWJpIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJwYW4tSU4ifSx7Im5h
+        bWUiOiJSb21hbmlhbiIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoicm9uLVJP
+        In0seyJuYW1lIjoiUnVzc2lhbiIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoi
+        cnVzLVJVIn0seyJuYW1lIjoiU2VyYmlhbiIsImxhbmd1YWdlX3JlZ2lvbl9j
+        b2RlIjoic3JwLVNQIn0seyJuYW1lIjoiU2xvdmFrIiwibGFuZ3VhZ2VfcmVn
+        aW9uX2NvZGUiOiJzbG8tU0sifSx7Im5hbWUiOiJTbG92ZW5pYW4iLCJsYW5n
+        dWFnZV9yZWdpb25fY29kZSI6InNsdi1TSSJ9LHsibmFtZSI6IlNwYW5pc2gi
+        LCJsYW5ndWFnZV9yZWdpb25fY29kZSI6InNwYS1FUyJ9LHsibmFtZSI6IlNw
+        YW5pc2ggKExhdGluIEFtZXJpY2EpIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUi
+        OiJzcGEtWEwifSx7Im5hbWUiOiJTcGFuaXNoIChNZXhpY28pIiwibGFuZ3Vh
+        Z2VfcmVnaW9uX2NvZGUiOiJzcGEtTVgifSx7Im5hbWUiOiJTd2FoaWxpIiwi
+        bGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJzd2EtS0UifSx7Im5hbWUiOiJTd2Vk
+        aXNoIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJzd2UtU0UifSx7Im5hbWUi
+        OiJUYWdhbG9nIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJ0Z2wtUEgifSx7
+        Im5hbWUiOiJUYW1pbCIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoidGFtLUlO
+        In0seyJuYW1lIjoiVGhhaSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoidGhh
+        LVRIIn0seyJuYW1lIjoiVHJhZGl0aW9uYWwgQ2hpbmVzZSIsImxhbmd1YWdl
+        X3JlZ2lvbl9jb2RlIjoiemhvLUNOIn0seyJuYW1lIjoiVHJhZGl0aW9uYWwg
+        Q2hpbmVzZSAoSG9uZyBLb25nKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoi
+        emhvLUhLIn0seyJuYW1lIjoiVHJhZGl0aW9uYWwgQ2hpbmVzZSAoVGFpd2Fu
+        KSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiemhvLVRXIn0seyJuYW1lIjoi
+        VHVya2lzaCIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoidHVyLVRSIn0seyJu
+        YW1lIjoiVWtyYWluaWFuIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJ1a3It
+        VUEifSx7Im5hbWUiOiJWaWV0bmFtZXNlIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJ2aWUtVk4ifV0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://stagingapi.verbalizeit.com/v2/languages
+  recorded_at: Wed, 24 Dec 2014 23:35:29 GMT
+- request:
+    method: post
+    uri: https://stagingapi.verbalizeit.com/v2/tasks
+    body:
+      encoding: US-ASCII
+      string: source_language=eng-US&target_language=fra-FR&operation=video_transcription&file=sample.srt=application/octet-stream=/Users/nathanaelburt/verbalizeit/gem/verbalizeit/spec/support/sample.srt&media_resource_url=http://vimeo.com/100265082&start=true&rush_order=true
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      x-api-key:
+      - "<API KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 24 Dec 2014 23:35:33 GMT
+      ETag:
+      - '"f0dd6836ac1bb4376a5a1d5e8ce152bf"'
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Set-Cookie:
+      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWNjMTM1OWVhZTVkZDU5NGZiYzg5MmRlYWQ5NWE0MTVjBjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--0f6f5e9e6c91e3c97a880d79df97f0e73a47f345;
+        domain=.verbalizeit.com; path=/
+      Status:
+      - 200 OK
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 3bedf7dee94c252c6b04a1c136a0ae54
+      X-Runtime:
+      - '3.499779'
+      X-UA-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '630'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":"processing","rush_order":true,"id":"T399ECD","created_at":"2014-12-24T18:35:32-05:00","operation":"video_transcription","source_language":"eng-US","target_language":"fra-FR","price_currency":"usd","price_amount":67.76,"machine_first":false,"source_download_url":"https://stagingapi.verbalizeit.com/v2/tasks/T399ECD/source_file","source_filename":"sample.srt","unit_count":242,"unit_type":"second","translation_units":8,"translation_units_complete":0,"translator":{},"reviewer":{},"project_name":"None","url":"https://stagingapi.verbalizeit.com/v2/tasks/T399ECD","due_at":"2014-12-25T18:35:32-05:00","completed_at":null}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://stagingapi.verbalizeit.com/v2/tasks
+  recorded_at: Wed, 24 Dec 2014 23:35:33 GMT
+recorded_with: VCR 2.9.3
