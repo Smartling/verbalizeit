@@ -104,7 +104,7 @@ Optional parameters: `postback_url`, `status_url`, `start`, `rush_order`
 Optional parameters, as well as the `file` and `media_resource_url`, are passed in through an options hash.
 
 ```ruby
-client.create_task('text_translation', 'eng-US', 'fra-FR', {file: 'file.xliff', postback_url: 'https://www.postback.com'}
+client.create_task('text_translation', 'eng-US', 'fra-FR', {file: 'file.xliff', postback_url: 'https://www.postback.com'})
 #=> Verbalizeit::Task
 ```
 
@@ -120,12 +120,23 @@ client.start_task(id)
 
 ##### Download Completed File
 
-Returns the completed file for a task. Only available if the task is in the "complete" state.
+Returns a struct with the filename and body of a completed file for a task. Only available if the task is in the "complete" state.
 
 ```ruby
 id = 'T2EB60C'
-client.task_completed_file(id)
-#=> file
+completed_file = client.task_completed_file(id)
+completed_file.filename
+#=> sample.txt
+completed_file.content
+#=> "This is some sample text. \n\n And here is another paragraph"
+```
+
+If you would like to write the file to your local filesytem, you could do something like this.
+
+```ruby
+file = File.open(completed_file.filename, "w")
+file << completed_file.content
+file.close
 ```
 
 ### Errors
