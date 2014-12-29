@@ -194,9 +194,51 @@ describe Verbalizeit::Client do
 
         client = Verbalizeit::Client.new(staging_api_key, :staging)
 
-        expect{client.list_tasks}.to raise_error(Verbalizeit::Error::NotImplemented)
+        expect { client.list_tasks }.to raise_error(Verbalizeit::Error::NotImplemented)
       end
     end
 
   end
+
+  describe 'get task' do
+
+    it 'raises VerbalizeIt::Error::NotFound if the task does not exist' do
+      VCR.use_cassette('client/get_task_not_found') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        expect {
+          client.get_task('garbage')
+        }.to raise_error(Verbalizeit::Error::NotFound)
+      end
+    end
+
+    it 'raises VerbalizeIt::Error::Forbidden if the task does not belong to the account' do
+      VCR.use_cassette('client/get_task_forbidden') do
+        struct = Struct.new(:code, :body)
+        response = struct.new(403, {}.to_json)
+
+        allow(Typhoeus).to receive(:get).and_return(response)
+
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        expect {
+          client.get_task('sd9f8w3j434')
+        }.to raise_error(Verbalizeit::Error::Forbidden)
+      end
+    end
+
+    it 'can get an individual task' do
+      VCR.use_cassette('client/get_task') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        id = 'T2EB60C'
+        response = client.get_task(id)
+
+        expect(response.id).to eq(id)
+        expect(response.status).to_not eq(nil)
+      end
+    end
+
+  end
+
 end

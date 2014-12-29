@@ -11,5 +11,11 @@ module Verbalizeit
 
     class NotImplemented < StandardError
     end
+
+    class Forbidden < StandardError
+    end
+
+    class NotFound < StandardError
+    end
   end
 end

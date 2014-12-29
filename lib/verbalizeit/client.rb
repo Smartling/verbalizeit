@@ -50,6 +50,18 @@ module Verbalizeit
       end
     end
 
+    def get_task(id)
+      response = Typhoeus.get(get_task_url(id), headers: authorization_header)
+
+      if response.code == 200
+        Task.from(parse_body(response.body), self)
+      elsif response.code == 404
+        raise Error::NotFound
+      elsif response.code == 403
+        raise Error::Forbidden
+      end
+    end
+
     private
 
     def list_tasks_success(body)
@@ -72,6 +84,10 @@ module Verbalizeit
       elsif response.code == 401
         raise Error::Unauthorized
       end
+    end
+
+    def get_task_url(id)
+      tasks_url << "/#{id}"
     end
 
     def tasks_url
