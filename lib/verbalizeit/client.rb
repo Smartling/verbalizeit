@@ -68,7 +68,8 @@ module Verbalizeit
 
       # original string => "attachment; filename=\"sample.srt\""
       filename = response.headers["Content-Disposition"].rpartition("filename=").last
-      {filename: filename, body: response.body}
+      struct = Struct.new(:filename, :content)
+      struct.new(filename, response.body)
     end
 
     private

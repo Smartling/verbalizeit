@@ -316,8 +316,8 @@ describe Verbalizeit::Client do
 
         file = client.task_completed_file('T399ECD')
 
-        expect(file[:filename]).to eq("\"sample.srt\"")
-        expect(file[:body]).to include('I am sample translated text.')
+        expect(file.filename).to eq("\"sample.srt\"")
+        expect(file.content).to include('I am sample translated text.')
       end
     end
 
