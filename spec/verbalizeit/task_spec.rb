@@ -110,6 +110,14 @@ describe Verbalizeit::Task do
       expect(@task.reviewer.avatar).to eq('http://assets.verbalizeit.com/revewier.jpg')
     end
 
+    it 'has a postback url' do
+      expect(@task.postback_url).to eq('https://api.mycompany.com/finished_task')
+    end
+
+    it 'has a status url' do
+      expect(@task.status_url).to eq('https://api.mycompany.com/task_changed_status')
+    end
+
   end
 
 end

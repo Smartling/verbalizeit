@@ -99,5 +99,13 @@ module Verbalizeit
       Translator.new(@task["reviewer"])
     end
 
+    def postback_url
+      @task["postback_url"]
+    end
+
+    def status_url
+      @task["status_url"]
+    end
+
   end
 end

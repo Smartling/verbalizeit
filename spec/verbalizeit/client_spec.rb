@@ -117,6 +117,8 @@ describe Verbalizeit::Client do
         expect(task.rush_order).to eq(false)
         expect(task.price_amount > 0).to eq(true)
         expect(task.status).to eq('preview')
+        expect(task.postback_url).to eq(postback_url)
+        expect(task.status_url).to eq(status_url)
       end
     end
 

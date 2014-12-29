@@ -19,7 +19,9 @@ module Verbalizeit
         file: options[:file],
         media_resource_url: options[:media_resource_url],
         start: "#{options[:start]}",
-        rush_order: "#{options[:rush_order]}"
+        rush_order: "#{options[:rush_order]}",
+        postback_url: options[:postback_url],
+        status_url: options[:status_url]
       }
 
       response = Typhoeus.post(create_task_url, body: body, headers: authorization_header)
