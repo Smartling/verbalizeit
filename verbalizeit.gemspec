@@ -25,5 +25,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr", "~> 2.9.3"
   spec.add_development_dependency "dotenv", "~> 1.0.2"
   spec.add_development_dependency "pry", "~> 0.10.1"
+  spec.add_development_dependency "codeclimate-test-reporter", "~> 0.4.3"
   spec.add_runtime_dependency "typhoeus", "~> 0.6.9"
 end
