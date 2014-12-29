@@ -52,29 +52,31 @@ module Verbalizeit
 
     def get_task(id)
       response = Typhoeus.get(get_task_url(id), headers: authorization_header)
-
-      if response.code == 200
-        Task.from(parse_body(response.body), self)
-      elsif response.code == 404
-        raise Error::NotFound
-      elsif response.code == 403
-        raise Error::Forbidden
-      end
+      validate_response(response.code)
+      Task.from(parse_body(response.body), self)
     end
 
     def start_task(id)
       response = Typhoeus.post(start_task_url(id), headers: authorization_header)
+      validate_response(response.code)
+      true
+    end
 
-      if response.code == 200
-        true
-      elsif response.code == 404
-        raise Error::NotFound
-      elsif response.code == 403
-        raise Error::Forbidden
-      end
+    def task_completed_file(id)
+      response = Typhoeus.get(task_completed_file_url(id), headers: authorization_header)
+      validate_response(response.code)
+      response.body
     end
 
     private
+
+    def validate_response(code)
+      if code == 404
+        raise Error::NotFound
+      elsif code == 403
+        raise Error::Forbidden
+      end
+    end
 
     def list_tasks_success(body)
       parsed_body = parse_body(body)
@@ -96,6 +98,10 @@ module Verbalizeit
       elsif response.code == 401
         raise Error::Unauthorized
       end
+    end
+
+    def task_completed_file_url(id)
+      get_task_url(id) << "/completed_file"
     end
 
     def start_task_url(id)

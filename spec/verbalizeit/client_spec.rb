@@ -283,4 +283,43 @@ describe Verbalizeit::Client do
 
   end
 
+  describe 'task completed file' do
+
+    it 'raises VerbalizeIt::Error::NotFound if the task does not exist' do
+      VCR.use_cassette('client/completed_file_not_found') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        expect {
+          client.task_completed_file('garbage')
+        }.to raise_error(Verbalizeit::Error::NotFound)
+      end
+    end
+
+    it 'raises VerbalizeIt::Error::Forbidden if the task does not belong to the account' do
+      VCR.use_cassette('client/completed_file_forbidden') do
+        struct = Struct.new(:code, :body)
+        response = struct.new(403, {}.to_json)
+
+        allow(Typhoeus).to receive(:get).and_return(response)
+
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        expect {
+          client.task_completed_file('sd9f8w3j434')
+        }.to raise_error(Verbalizeit::Error::Forbidden)
+      end
+    end
+
+    it 'returns the completed file' do
+      VCR.use_cassette('client/completed_file') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        file = client.task_completed_file('T399ECD')
+
+        expect(file).to include('I am sample translated text.')
+      end
+    end
+
+  end
+
 end
