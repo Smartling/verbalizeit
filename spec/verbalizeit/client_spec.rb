@@ -33,7 +33,7 @@ describe Verbalizeit::Client do
     let(:source_language) { 'eng-US' }
     let(:target_language) { 'fra-FR' }
     let(:operation) { 'text_translation' }
-    let(:video) {'video_transcription'}
+    let(:video) { 'video_transcription' }
     let(:file_xliff) { File.open(File.expand_path('./spec/support/sample.xliff'), 'r') }
     let(:file_srt) { File.open(File.expand_path('./spec/support/sample.srt'), 'r') }
     let(:media_resource_url) { 'http://vimeo.com/100265082' }
@@ -142,4 +142,61 @@ describe Verbalizeit::Client do
 
   end
 
+  describe 'list tasks' do
+
+    it 'gets a list of all the tasks' do
+      VCR.use_cassette('client/list_tasks') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        tasks = client.list_tasks
+
+        expect(tasks[:total]).to eq(7)
+        expect(tasks[:start]).to eq(0)
+        expect(tasks[:limit]).to eq(10)
+        expect(tasks[:tasks].first.id).to_not eq(nil)
+      end
+    end
+
+    it 'can specify a start and limit' do
+      VCR.use_cassette('client/list_tasks_start_limit') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        tasks = client.list_tasks({start: 2, limit: 5})
+
+        expect(tasks[:total]).to eq(7)
+        expect(tasks[:start]).to eq(2)
+        expect(tasks[:limit]).to eq(5)
+        expect(tasks[:tasks].first.id).to_not eq(nil)
+        expect(tasks[:tasks].size).to eq(5)
+      end
+    end
+
+    it 'can specify a status' do
+      VCR.use_cassette('client/list_tasks_status') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        tasks = client.list_tasks({status: 'preview'})
+
+        expect(tasks[:total]).to eq(6)
+        expect(tasks[:start]).to eq(0)
+        expect(tasks[:limit]).to eq(10)
+        expect(tasks[:tasks].first.id).to_not eq(nil)
+        expect(tasks[:tasks].size).to eq(6)
+      end
+    end
+
+    it 'raises VerbalizeIt::Error::NotImplemented if an error response is received' do
+      VCR.use_cassette('client/list_tasks_not_implemented') do
+        struct = Struct.new(:code, :body)
+        response = struct.new(400, {}.to_json)
+
+        allow(Typhoeus).to receive(:get).and_return(response)
+
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        expect{client.list_tasks}.to raise_error(Verbalizeit::Error::NotImplemented)
+      end
+    end
+
+  end
 end

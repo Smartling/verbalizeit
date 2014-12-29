@@ -24,10 +24,10 @@ module Verbalizeit
         status_url: options[:status_url]
       }
 
-      response = Typhoeus.post(create_task_url, body: body, headers: authorization_header)
+      response = Typhoeus.post(tasks_url, body: body, headers: authorization_header)
 
       if response.code == 200
-        Verbalizeit::Task.from(response.body, self)
+        Task.from(parse_body(response.body), self)
       elsif response.code == 400
         raise Error::BadRequest, format_errors(response.body)
       elsif response.code == 401
@@ -35,7 +35,33 @@ module Verbalizeit
       end
     end
 
+    def list_tasks(options = {})
+      params = {
+        start: options[:start],
+        limit: options[:limit] || 10,
+        status: options[:status]
+      }
+      response = Typhoeus.get(tasks_url, params: params, headers: authorization_header)
+
+      if response.code == 200
+        list_tasks_success(response.body)
+      else
+        raise Error::NotImplemented
+      end
+    end
+
     private
+
+    def list_tasks_success(body)
+      parsed_body = parse_body(body)
+
+      {
+        total: parsed_body["total"],
+        start: parsed_body["start"],
+        limit: parsed_body["limit"],
+        tasks: parsed_body["tasks"].map { |task| Task.from(task, self) }
+      }
+    end
 
     def fetch_languages
       response = Typhoeus.get(languages_url, headers: authorization_header)
@@ -48,7 +74,7 @@ module Verbalizeit
       end
     end
 
-    def create_task_url
+    def tasks_url
       base_url << "tasks"
     end
 
@@ -72,7 +98,11 @@ module Verbalizeit
     end
 
     def format_errors(body)
-      JSON.parse(body).map { |_, errors| errors.map { |type, error| error } }.flatten.join(".")
+      parse_body(body).map { |_, errors| errors.map { |type, error| error } }.flatten.join(".")
+    end
+
+    def parse_body(body)
+      JSON.parse(body)
     end
 
   end

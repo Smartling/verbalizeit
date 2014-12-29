@@ -8,5 +8,8 @@ module Verbalizeit
 
     class BadRequest < StandardError
     end
+
+    class NotImplemented < StandardError
+    end
   end
 end

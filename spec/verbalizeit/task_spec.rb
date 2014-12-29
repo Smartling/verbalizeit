@@ -7,8 +7,9 @@ describe Verbalizeit::Task do
     before(:all) do
       VCR.use_cassette('task/languages') do
         json = File.read('./spec/support/created_task.json')
+        body = JSON.parse(json)
         @client = Verbalizeit::Client.new(ENV['STAGING_API_KEY'], :staging)
-        @task = Verbalizeit::Task.from(json, @client)
+        @task = Verbalizeit::Task.from(body, @client)
       end
     end
 

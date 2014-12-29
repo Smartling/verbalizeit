@@ -2,8 +2,7 @@ module Verbalizeit
   class Task
 
     def self.from(body, client)
-      parsed_body = JSON.parse(body)
-      new(parsed_body, client)
+      new(body, client)
     end
 
     def initialize(task, client)
