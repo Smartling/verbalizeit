@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://stagingapi.verbalizeit.com/v2/tasks/sd9f8w3j434/start
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Key:
+      - "<API KEY>"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 29 Dec 2014 21:34:42 GMT
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Set-Cookie:
+      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWU4YjViMGIzZTdhMzFhNDVjMWRhMDlmMzZmNWNmN2FkBjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--5dfd3b85d1ec148ee2c09d00fe55357a209b7347;
+        domain=.verbalizeit.com; path=/
+      Status:
+      - 403 Forbidden
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 0d9483121a7600cc2701745ab458827c
+      X-Runtime:
+      - '0.655177'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Mon, 29 Dec 2014 21:34:45 GMT
+recorded_with: VCR 2.9.3

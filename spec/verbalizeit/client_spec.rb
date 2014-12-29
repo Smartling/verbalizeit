@@ -3,6 +3,15 @@ require 'spec_helper'
 describe Verbalizeit::Client do
 
   let(:staging_api_key) { ENV['STAGING_API_KEY'] }
+  let(:source_language) { 'eng-US' }
+  let(:target_language) { 'fra-FR' }
+  let(:operation) { 'text_translation' }
+  let(:video) { 'video_transcription' }
+  let(:file_xliff) { File.open(File.expand_path('./spec/support/sample.xliff'), 'r') }
+  let(:file_srt) { File.open(File.expand_path('./spec/support/sample.srt'), 'r') }
+  let(:media_resource_url) { 'http://vimeo.com/100265082' }
+  let(:postback_url) { 'https://verbalizeit.com/postback' }
+  let(:status_url) { 'https://verbalizeit.com/status' }
 
   describe 'initialize' do
 
@@ -29,16 +38,6 @@ describe Verbalizeit::Client do
   end
 
   describe 'create task' do
-
-    let(:source_language) { 'eng-US' }
-    let(:target_language) { 'fra-FR' }
-    let(:operation) { 'text_translation' }
-    let(:video) { 'video_transcription' }
-    let(:file_xliff) { File.open(File.expand_path('./spec/support/sample.xliff'), 'r') }
-    let(:file_srt) { File.open(File.expand_path('./spec/support/sample.srt'), 'r') }
-    let(:media_resource_url) { 'http://vimeo.com/100265082' }
-    let(:postback_url) { 'https://verbalizeit.com/postback' }
-    let(:status_url) { 'https://verbalizeit.com/status' }
 
     it 'raises Verbalizeit::Error::BadRequest if no source_language is present' do
       VCR.use_cassette('client/no_source_language') do
@@ -123,7 +122,7 @@ describe Verbalizeit::Client do
     end
 
     it 'creates a task and starts it' do
-      VCR.use_cassette('client/start_task') do
+      VCR.use_cassette('client/create_task_start_task') do
         client = Verbalizeit::Client.new(staging_api_key, :staging)
 
         options = {
@@ -236,6 +235,49 @@ describe Verbalizeit::Client do
 
         expect(response.id).to eq(id)
         expect(response.status).to_not eq(nil)
+      end
+    end
+
+  end
+
+  describe 'start task' do
+
+    it 'raises VerbalizeIt::Error::NotFound if the task does not exist' do
+      VCR.use_cassette('client/start_task_not_found') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        expect {
+          client.start_task('garbage')
+        }.to raise_error(Verbalizeit::Error::NotFound)
+      end
+    end
+
+    it 'raises VerbalizeIt::Error::Forbidden if the task does not belong to the account' do
+      VCR.use_cassette('client/start_task_forbidden') do
+        struct = Struct.new(:code, :body)
+        response = struct.new(403, {}.to_json)
+
+        allow(Typhoeus).to receive(:get).and_return(response)
+
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        expect {
+          client.start_task('sd9f8w3j434')
+        }.to raise_error(Verbalizeit::Error::Forbidden)
+      end
+    end
+
+    it 'starts a task' do
+      VCR.use_cassette('client/start_task') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+        options = {file: file_xliff}
+        task = client.create_task(source_language, target_language, operation, options)
+
+        expect(task.status).to_not eq('processing')
+
+        response = client.start_task(task.id)
+
+        expect(response).to eq(true)
       end
     end
 

@@ -62,6 +62,18 @@ module Verbalizeit
       end
     end
 
+    def start_task(id)
+      response = Typhoeus.post(start_task_url(id), headers: authorization_header)
+
+      if response.code == 200
+        true
+      elsif response.code == 404
+        raise Error::NotFound
+      elsif response.code == 403
+        raise Error::Forbidden
+      end
+    end
+
     private
 
     def list_tasks_success(body)
@@ -84,6 +96,10 @@ module Verbalizeit
       elsif response.code == 401
         raise Error::Unauthorized
       end
+    end
+
+    def start_task_url(id)
+      get_task_url(id) << "/start"
     end
 
     def get_task_url(id)

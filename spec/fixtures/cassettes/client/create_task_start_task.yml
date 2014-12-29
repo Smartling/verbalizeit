@@ -29,26 +29,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 29 Dec 2014 21:36:21 GMT
+      - Mon, 29 Dec 2014 21:36:02 GMT
       Etag:
       - '"6ed3f7edbf0ed0cbba041a3932fd237c"'
       Server:
       - nginx/1.4.6 (Ubuntu)
       Set-Cookie:
-      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWEzYjY3ZWY4N2U3YTRhMTU3ODhlNTNiZjI2NTM3NDA0BjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--47e754e80dfd9d11a9e11613c4e3d07a308b6798;
+      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTQ0NDAxNGU3N2RlZGUyM2NmMDI4NDY2YWRhNmYwNDY0BjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--58996d53b5a35b03bb3ec5ef1eeb4ca823375a9a;
         domain=.verbalizeit.com; path=/
       Status:
       - 200 OK
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 38f4af75b57a5d2e215448110c40bc12
+      - 19e04edcfc0c803e22e9c77e83ab1acb
       X-Runtime:
-      - '0.747890'
+      - '0.665972'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '3254'
       Connection:
       - keep-alive
     body:
@@ -128,13 +128,13 @@ http_interactions:
         VUEifSx7Im5hbWUiOiJWaWV0bmFtZXNlIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
         ZGUiOiJ2aWUtVk4ifV0=
     http_version: 
-  recorded_at: Mon, 29 Dec 2014 21:36:23 GMT
+  recorded_at: Mon, 29 Dec 2014 21:36:04 GMT
 - request:
     method: post
     uri: https://stagingapi.verbalizeit.com/v2/tasks
     body:
       encoding: UTF-8
-      string: file=%23%3CFile%3A0x007f82a3b1cee8%3E&media_resource_url=&operation=text_translation&postback_url=&rush_order=&source_language=eng-US&start=&status_url=&target_language=fra-FR
+      string: file=%23%3CFile%3A0x007fc371d12540%3E&media_resource_url=http%3A%2F%2Fvimeo.com%2F100265082&operation=video_transcription&postback_url=&rush_order=true&source_language=eng-US&start=true&status_url=&target_language=fra-FR
     headers:
       User-Agent:
       - Typhoeus - https://github.com/typhoeus/typhoeus
@@ -158,87 +158,31 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 29 Dec 2014 21:36:33 GMT
+      - Mon, 29 Dec 2014 21:36:16 GMT
       Etag:
-      - '"c7ef8934793c925b9c8f706ca5d3614f"'
+      - '"2d69d1becc62d964f3d7ea4d91dd7632"'
       Server:
       - nginx/1.4.6 (Ubuntu)
       Set-Cookie:
-      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTFhODZiNDM5ODY4OWVmZGRiNTQ2NjQ4N2IyNTZkZGI5BjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--e7270d8e1a986a7ae71ff98eed098b95629b2a46;
+      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWU1MmM5OWVjZGExOTljMjQxMTMzZDFhYTQ2OTEyZWM2BjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--f78066f96176d928d3cbf70c078c773ad4c3d5b1;
         domain=.verbalizeit.com; path=/
       Status:
       - 200 OK
       X-Rack-Cache:
       - invalidate, pass
       X-Request-Id:
-      - 4ca310f115237de9b01f9ff188e0c4c9
+      - c86bba10742bea3de9d843f195aaca03
       X-Runtime:
-      - '11.214369'
+      - '13.745466'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '661'
+      - '668'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"status":"preview","rush_order":false,"id":"T23854F","created_at":"2014-12-29T16:36:31-05:00","operation":"text_translation","source_language":"eng-US","target_language":"fra-FR","price_currency":"usd","price_amount":2.04,"machine_first":false,"source_download_url":"https://stagingapi.verbalizeit.com/v2/tasks/T23854F/source_file","source_filename":"sample.xliff","unit_count":12,"unit_type":"word","translation_units":3,"translation_units_complete":0,"translator":{},"reviewer":{},"project_name":"None","url":"https://stagingapi.verbalizeit.com/v2/tasks/T23854F","due_at":"2014-12-31T16:36:31-05:00","completed_at":null,"postback_url":null,"status_url":null}'
+      string: '{"status":"processing","rush_order":true,"id":"T399ECF","created_at":"2014-12-29T16:36:14-05:00","operation":"video_transcription","source_language":"eng-US","target_language":"fra-FR","price_currency":"usd","price_amount":67.76,"machine_first":false,"source_download_url":"https://stagingapi.verbalizeit.com/v2/tasks/T399ECF/source_file","source_filename":"sample.srt","unit_count":242,"unit_type":"second","translation_units":8,"translation_units_complete":0,"translator":{},"reviewer":{},"project_name":"None","url":"https://stagingapi.verbalizeit.com/v2/tasks/T399ECF","due_at":"2014-12-30T16:36:14-05:00","completed_at":null,"postback_url":null,"status_url":null}'
     http_version: 
-  recorded_at: Mon, 29 Dec 2014 21:36:35 GMT
-- request:
-    method: post
-    uri: https://stagingapi.verbalizeit.com/v2/tasks/T23854F/start
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      X-Api-Key:
-      - "<API KEY>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
-      Access-Control-Allow-Methods:
-      - POST, PUT, GET, OPTIONS, DELETE
-      Access-Control-Allow-Origin:
-      - ''
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 29 Dec 2014 21:36:36 GMT
-      Etag:
-      - '"99914b932bd37a50b983c5e7c90ae93b"'
-      Server:
-      - nginx/1.4.6 (Ubuntu)
-      Set-Cookie:
-      - _verbalizeit_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWIxMWM5YmE3NzJiYTY3YjA2ZmQ2MjU1YmE4OWYxN2M3BjsAVEkiHXdhcmRlbi51c2VyLmN1c3RvbWVyLmtleQY7AFRbCEkiDUN1c3RvbWVyBjsARlsGaQLVAkkiIiQyYSQxMCRDNTlDS0tsaTVQOVBVLmF0TERVeHJPBjsAVA%3D%3D--c2d4d6cc8c485c6e778bae7f45ad031ee3371be6;
-        domain=.verbalizeit.com; path=/
-      Status:
-      - 200 OK
-      X-Rack-Cache:
-      - invalidate, pass
-      X-Request-Id:
-      - 52ea82c4d50a8f9a67ecebd1164e22a7
-      X-Runtime:
-      - '3.535019'
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Content-Length:
-      - '2'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: "{}"
-    http_version: 
-  recorded_at: Mon, 29 Dec 2014 21:36:38 GMT
+  recorded_at: Mon, 29 Dec 2014 21:36:18 GMT
 recorded_with: VCR 2.9.3
