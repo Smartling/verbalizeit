@@ -65,7 +65,10 @@ module Verbalizeit
     def task_completed_file(id)
       response = Typhoeus.get(task_completed_file_url(id), headers: authorization_header)
       validate_response(response.code)
-      response.body
+
+      # original string => "attachment; filename=\"sample.srt\""
+      filename = response.headers["Content-Disposition"].rpartition("filename=").last
+      {filename: filename, body: response.body}
     end
 
     private
