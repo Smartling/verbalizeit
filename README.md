@@ -6,7 +6,6 @@ TODO: Write a gem description
 
 [![Circle CI](https://circleci.com/gh/VerbalizeItInc/verbalizeit.svg?style=svg)](https://circleci.com/gh/VerbalizeItInc/verbalizeit)
 [![Code Climate](https://codeclimate.com/github/VerbalizeItInc/verbalizeit/badges/gpa.svg)](https://codeclimate.com/github/VerbalizeItInc/verbalizeit)
-[![Test Coverage](https://codeclimate.com/github/VerbalizeItInc/verbalizeit/badges/coverage.svg)](https://codeclimate.com/github/VerbalizeItInc/verbalizeit)
 
 ## Installation
 
