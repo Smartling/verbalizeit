@@ -30,7 +30,7 @@ The VerbalizeIt gem supports the same endpoints as the V2 API.
 Initialize the VerbalizeIt client with your API key and the API environment. The supported API environments are `:staging` and `:production`.
 
 ```ruby
-client = VerbalizeIt::Client.new('my_key', :staging)
+client = Verbalizeit::Client.new('my_key', :staging)
 ```
 
 ### Languages
@@ -98,13 +98,13 @@ task.price_amount
 
 Creates a new task in the VerbalizeIt system. Returns a `Verbalizeit::Task`.
 
-Required parameters: `operation`, `source_language`, `target_language`, at least one of `file` or `media_resource_url`.
+Required parameters: `source_language`, `target_language`, `operation` at least one of `file` or `media_resource_url`.
 Optional parameters: `postback_url`, `status_url`, `start`, `rush_order`
 
 Optional parameters, as well as the `file` and `media_resource_url`, are passed in through an options hash.
 
 ```ruby
-client.create_task('text_translation', 'eng-US', 'fra-FR', {file: 'file.xliff', postback_url: 'https://www.postback.com'})
+client.create_task('eng-US', 'fra-FR', 'text_translation', {file: 'file.xliff', postback_url: 'https://www.postback.com'})
 #=> Verbalizeit::Task
 ```
 
@@ -115,7 +115,7 @@ Starts a created task. Returns a status code of `200`.
 ```ruby
 id = 'T2EB60C'
 client.start_task(id)
-#=> 200
+#=> true
 ```
 
 ##### Download Completed File
