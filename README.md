@@ -115,7 +115,7 @@ Starts a created task. Returns a status code of `200`.
 ```ruby
 id = 'T2EB60C'
 client.start_task(id)
-#=> 200
+#=> true
 ```
 
 ##### Download Completed File
