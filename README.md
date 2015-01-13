@@ -30,7 +30,7 @@ The VerbalizeIt gem supports the same endpoints as the V2 API.
 Initialize the VerbalizeIt client with your API key and the API environment. The supported API environments are `:staging` and `:production`.
 
 ```ruby
-client = VerbalizeIt::Client.new('my_key', :staging)
+client = Verbalizeit::Client.new('my_key', :staging)
 ```
 
 ### Languages
