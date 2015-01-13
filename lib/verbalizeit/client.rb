@@ -130,6 +130,8 @@ module Verbalizeit
           "https://stagingapi.verbalizeit.com/v2/"
         when :production
           "https://api.verbalizeit.com/v2/"
+        when :local
+          "http://localhost.verbalizeit.com:3000/v2/"
         else
           raise Error::UnknownEnvironment, "you may specify :staging or :production"
       end
