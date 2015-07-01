@@ -47,7 +47,7 @@ describe Verbalizeit::Client do
 
         expect {
           client.create_task(nil, target_language, operation, options)
-        }.to raise_error(Verbalizeit::Error::BadRequest)
+        }.to raise_error(Verbalizeit::Error::BadRequest, 'Not a valid language code')
       end
     end
 
@@ -59,7 +59,7 @@ describe Verbalizeit::Client do
 
         expect {
           client.create_task(source_language, nil, operation, options)
-        }.to raise_error(Verbalizeit::Error::BadRequest)
+        }.to raise_error(Verbalizeit::Error::BadRequest, 'Not a valid language code')
       end
     end
 
@@ -71,7 +71,7 @@ describe Verbalizeit::Client do
 
         expect {
           client.create_task(source_language, target_language, nil, options)
-        }.to raise_error(Verbalizeit::Error::BadRequest)
+        }.to raise_error(Verbalizeit::Error::BadRequest, 'Not a valid operation')
       end
     end
 
@@ -81,7 +81,19 @@ describe Verbalizeit::Client do
 
         expect {
           client.create_task(source_language, target_language, operation)
-        }.to raise_error(Verbalizeit::Error::BadRequest)
+        }.to raise_error(Verbalizeit::Error::BadRequest, 'Invalid URL')
+      end
+    end
+
+    it 'joins multiple errors with periods' do
+      VCR.use_cassette('client/no_source_and_operation') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        options = {file: file_xliff}
+
+        expect {
+          client.create_task(nil, target_language, nil, options)
+        }.to raise_error(Verbalizeit::Error::BadRequest, 'Not a valid operation. Not a valid language code')
       end
     end
 

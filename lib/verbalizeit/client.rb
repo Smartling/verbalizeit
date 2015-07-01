@@ -142,7 +142,7 @@ module Verbalizeit
     end
 
     def format_errors(body)
-      parse_body(body).map { |_, errors| errors.map { |type, error| error } }.flatten.join(".")
+      parse_body(body).map { |_, errors| errors.map { |type, error| error } }.flatten.join(". ")
     end
 
     def parse_body(body)
