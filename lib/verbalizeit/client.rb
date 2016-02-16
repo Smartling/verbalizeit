@@ -21,7 +21,8 @@ module Verbalizeit
         start: "#{options[:start]}",
         rush_order: "#{options[:rush_order]}",
         postback_url: options[:postback_url],
-        status_url: options[:status_url]
+        status_url: options[:status_url],
+        special_instructions: options[:special_instructions]
       }
 
       response = Typhoeus.post(tasks_url, body: body, headers: authorization_header)

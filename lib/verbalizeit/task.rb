@@ -106,5 +106,9 @@ module Verbalizeit
       @task["status_url"]
     end
 
+    def special_instructions
+      @task["special_instructions"]
+    end
+
   end
 end

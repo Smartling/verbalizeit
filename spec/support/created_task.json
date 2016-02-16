@@ -28,5 +28,6 @@
     "avatar": "http://assets.verbalizeit.com/revewier.jpg"
   },
   "postback_url": "https://api.mycompany.com/finished_task",
-  "status_url": "https://api.mycompany.com/task_changed_status"
+  "status_url": "https://api.mycompany.com/task_changed_status",
+  "special_instructions": "My instructions"
 }

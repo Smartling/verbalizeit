@@ -119,6 +119,10 @@ describe Verbalizeit::Task do
       expect(@task.status_url).to eq('https://api.mycompany.com/task_changed_status')
     end
 
+    it 'has special instructions' do
+      expect(@task.special_instructions).to eq('My instructions')
+    end
+
   end
 
 end

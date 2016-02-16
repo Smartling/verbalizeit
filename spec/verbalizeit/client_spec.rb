@@ -151,6 +151,21 @@ describe Verbalizeit::Client do
       end
     end
 
+    it 'creates a task with special instructions' do
+      VCR.use_cassette('client/create_task_with_instructions') do
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        options = {
+          file: file_srt, media_resource_url: media_resource_url,
+          start: true, rush_order: true, special_instructions: 'do well'
+        }
+
+        task = client.create_task(source_language, target_language, video, options)
+        expect(task.id).to_not eq(nil)
+        expect(task.special_instructions).to eq('do well')
+      end
+    end
+
   end
 
   describe 'list tasks' do
