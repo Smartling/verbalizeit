@@ -1,0 +1,244 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://stagingapi.verbalizeit.com/v2/languages
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Key:
+      - "<API KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 25 May 2016 20:15:41 GMT
+      Etag:
+      - W/"01b936a19cb9c09a0ba3d5e6d7136eb3"
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Set-Cookie:
+      - XSRF-TOKEN=%2FDvYo0l1AlOgs07m5hW75qB%2F%2BsLVF2V4tC90lzG3DvmXcc%2B%2Bh6T5QshNkCHfjK2i126uqJDlmXiEtNB98fok%2BQ%3D%3D;
+        path=/
+      - _verbalizeit_session=c0k3dlNxMXcvbU1PMFpCbkpqYjE4YVhvWHVuNlBaSnk3OXlKNUlydkk1NGJkRHZjeHU2c0g4MDdiVGx3bDVvVFVDRmR0N1pvbEtyRkRIWVJsd3hHOHcrVURQcnR3NmtwcEVrWUpqRjdrMkhuM0ppYjl6ZG9FK1RiNEtoR3FQYmM1K1FvWjhUcG5JdVl3RmJYbFZ4dXFWRm4weXJJeGNMTUpPUjNxWmFxWisvVEhXc0lIbHhWNWduZ2oxTldCY3hZLS1ETWlLRk0wOWhZMUFyemxFTXREakRBPT0%3D--fb4b5631001c6ff92457ec2e979d0c76c370940d;
+        domain=.verbalizeit.com; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 11353fa1-a365-435c-800b-698da0b349b0
+      X-Runtime:
+      - '0.372590'
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5586'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkVuZ2xpc2ggKFUuUy4pIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJlbmctVVMiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJp
+        Z2h0In0seyJuYW1lIjoiQWZyaWthYW5zIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJhZnItWkEiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJp
+        Z2h0In0seyJuYW1lIjoiQXJhYmljIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUi
+        OiJhcmEtQUUiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJyaWdodCB0byBsZWZ0
+        In0seyJuYW1lIjoiQm9zbmlhbiIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoi
+        Ym9zLUJBIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9
+        LHsibmFtZSI6IkJ1bGdhcmlhbiIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoi
+        YnVsLUJHIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9
+        LHsibmFtZSI6IkNhdGFsYW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImNh
+        dC1FUyIsImxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQgdG8gcmlnaHQifSx7
+        Im5hbWUiOiJDaGluZXNlIChUcmFkaXRpb25hbCAtIEhvbmcgS29uZykiLCJs
+        YW5ndWFnZV9yZWdpb25fY29kZSI6Inpoby1ISyIsImxhbmd1YWdlX2RpcmVj
+        dGlvbiI6ImxlZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJDaGluZXNlIChUcmFk
+        aXRpb25hbCAtIFRhaXdhbikiLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Inpo
+        by1UVyIsImxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQgdG8gcmlnaHQifSx7
+        Im5hbWUiOiJDaGluZXNlIChUcmFkaXRpb25hbCkiLCJsYW5ndWFnZV9yZWdp
+        b25fY29kZSI6Inpoby1DTiIsImxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQg
+        dG8gcmlnaHQifSx7Im5hbWUiOiJDcm9hdGlhbiIsImxhbmd1YWdlX3JlZ2lv
+        bl9jb2RlIjoiaHJ2LUhSIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0
+        byByaWdodCJ9LHsibmFtZSI6IkN6ZWNoIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJjZXMtQ1oiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJp
+        Z2h0In0seyJuYW1lIjoiRGFuaXNoIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUi
+        OiJkYW4tREsiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJpZ2h0
+        In0seyJuYW1lIjoiRGFyaSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoicHJz
+        LUFGIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsi
+        bmFtZSI6IkR1dGNoIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJkdXQtTkwi
+        LCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJpZ2h0In0seyJuYW1l
+        IjoiRW5nbGlzaCAoQXVzdHJhbGlhKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2Rl
+        IjoiZW5nLUFVIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdo
+        dCJ9LHsibmFtZSI6IkVuZ2xpc2ggKENhbmFkYSkiLCJsYW5ndWFnZV9yZWdp
+        b25fY29kZSI6ImVuZy1DQSIsImxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQg
+        dG8gcmlnaHQifSx7Im5hbWUiOiJFbmdsaXNoIChVSykiLCJsYW5ndWFnZV9y
+        ZWdpb25fY29kZSI6ImVuZy1HQiIsImxhbmd1YWdlX2RpcmVjdGlvbiI6Imxl
+        ZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJFc3RvbmlhbiIsImxhbmd1YWdlX3Jl
+        Z2lvbl9jb2RlIjoiZXN0LUVFIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVm
+        dCB0byByaWdodCJ9LHsibmFtZSI6IkZhcnNpIiwibGFuZ3VhZ2VfcmVnaW9u
+        X2NvZGUiOiJmYXMtSVIiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRv
+        IHJpZ2h0In0seyJuYW1lIjoiRmlubmlzaCIsImxhbmd1YWdlX3JlZ2lvbl9j
+        b2RlIjoiZmluLUZJIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byBy
+        aWdodCJ9LHsibmFtZSI6IkZyZW5jaCAoQ2FuYWRhKSIsImxhbmd1YWdlX3Jl
+        Z2lvbl9jb2RlIjoiZnJhLUNBIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVm
+        dCB0byByaWdodCJ9LHsibmFtZSI6IkZyZW5jaCAoRnJhbmNlKSIsImxhbmd1
+        YWdlX3JlZ2lvbl9jb2RlIjoiZnJhLUZSIiwibGFuZ3VhZ2VfZGlyZWN0aW9u
+        IjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6Ikdlcm1hbiAoR2VybWFueSki
+        LCJsYW5ndWFnZV9yZWdpb25fY29kZSI6ImRldS1ERSIsImxhbmd1YWdlX2Rp
+        cmVjdGlvbiI6ImxlZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJHZXJtYW4gKFN3
+        aXR6ZXJsYW5kKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiZGV1LUNIIiwi
+        bGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6
+        IkdyZWVrIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJlbGwtR1IiLCJsYW5n
+        dWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJpZ2h0In0seyJuYW1lIjoiSGVi
+        cmV3IiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJoZWItSUwiLCJsYW5ndWFn
+        ZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJpZ2h0In0seyJuYW1lIjoiSGluZGki
+        LCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Imhpbi1JTiIsImxhbmd1YWdlX2Rp
+        cmVjdGlvbiI6ImxlZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJIdW5nYXJpYW4i
+        LCJsYW5ndWFnZV9yZWdpb25fY29kZSI6Imh1bi1IVSIsImxhbmd1YWdlX2Rp
+        cmVjdGlvbiI6ImxlZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJJbmRvbmVzaWFu
+        IiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJpbmQtSUQiLCJsYW5ndWFnZV9k
+        aXJlY3Rpb24iOiJsZWZ0IHRvIHJpZ2h0In0seyJuYW1lIjoiSXRhbGlhbiIs
+        Imxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoiaXRhLUlUIiwibGFuZ3VhZ2VfZGly
+        ZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6IkphcGFuZXNlIiwi
+        bGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJqcG4tSlAiLCJsYW5ndWFnZV9kaXJl
+        Y3Rpb24iOiJsZWZ0IHRvIHJpZ2h0In0seyJuYW1lIjoiS2FubmFkYSIsImxh
+        bmd1YWdlX3JlZ2lvbl9jb2RlIjoia2FuLUlOIiwibGFuZ3VhZ2VfZGlyZWN0
+        aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6IkthemFraCIsImxhbmd1
+        YWdlX3JlZ2lvbl9jb2RlIjoia2F6LUtaIiwibGFuZ3VhZ2VfZGlyZWN0aW9u
+        IjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6IktvcmVhbiIsImxhbmd1YWdl
+        X3JlZ2lvbl9jb2RlIjoia29yLUtSIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoi
+        bGVmdCB0byByaWdodCJ9LHsibmFtZSI6IkxhdHZpYW4iLCJsYW5ndWFnZV9y
+        ZWdpb25fY29kZSI6Imxhdi1MViIsImxhbmd1YWdlX2RpcmVjdGlvbiI6Imxl
+        ZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJMaXRodWFuaWFuIiwibGFuZ3VhZ2Vf
+        cmVnaW9uX2NvZGUiOiJsaXQtTFQiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJs
+        ZWZ0IHRvIHJpZ2h0In0seyJuYW1lIjoiTWFuZGFyaW4iLCJsYW5ndWFnZV9y
+        ZWdpb25fY29kZSI6ImNtbi1DTiIsImxhbmd1YWdlX2RpcmVjdGlvbiI6Imxl
+        ZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJOb3J3ZWdpYW4iLCJsYW5ndWFnZV9y
+        ZWdpb25fY29kZSI6Im5vci1OTyIsImxhbmd1YWdlX2RpcmVjdGlvbiI6Imxl
+        ZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJOb3J3ZWdpYW4gKEJva23DpWwpIiwi
+        bGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJub2ItTk8iLCJsYW5ndWFnZV9kaXJl
+        Y3Rpb24iOiJsZWZ0IHRvIHJpZ2h0In0seyJuYW1lIjoiTm9yd2VnaWFuIChO
+        eW5vcnNrKSIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoibm5vLU5PIiwibGFu
+        Z3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6IlBh
+        c2h0byIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoicHVzLUFGIiwibGFuZ3Vh
+        Z2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6IlBvbGlz
+        aCIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoicG9sLVBMIiwibGFuZ3VhZ2Vf
+        ZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6IlBvcnR1Z3Vl
+        c2UgKEJyYXppbCkiLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6InBvci1CUiIs
+        Imxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQgdG8gcmlnaHQifSx7Im5hbWUi
+        OiJQb3J0dWd1ZXNlIChQb3J0dWdhbCkiLCJsYW5ndWFnZV9yZWdpb25fY29k
+        ZSI6InBvci1QVCIsImxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQgdG8gcmln
+        aHQifSx7Im5hbWUiOiJQdW5qYWJpIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUi
+        OiJwYW4tSU4iLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJpZ2h0
+        In0seyJuYW1lIjoiUm9tYW5pYW4iLCJsYW5ndWFnZV9yZWdpb25fY29kZSI6
+        InJvbi1STyIsImxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQgdG8gcmlnaHQi
+        fSx7Im5hbWUiOiJSdXNzaWFuIiwibGFuZ3VhZ2VfcmVnaW9uX2NvZGUiOiJy
+        dXMtUlUiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJpZ2h0In0s
+        eyJuYW1lIjoiU2VyYmlhbiIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoic3Jw
+        LVNQIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsi
+        bmFtZSI6IlNsb3ZhayIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoic2xvLVNL
+        IiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFt
+        ZSI6IlNsb3ZlbmlhbiIsImxhbmd1YWdlX3JlZ2lvbl9jb2RlIjoic2x2LVNJ
+        IiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFt
+        ZSI6IlNwYW5pc2ggKExhdGluIEFtZXJpY2EpIiwibGFuZ3VhZ2VfcmVnaW9u
+        X2NvZGUiOiJzcGEtWEwiLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRv
+        IHJpZ2h0In0seyJuYW1lIjoiU3BhbmlzaCAoTWV4aWNvKSIsImxhbmd1YWdl
+        X3JlZ2lvbl9jb2RlIjoic3BhLU1YIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoi
+        bGVmdCB0byByaWdodCJ9LHsibmFtZSI6IlNwYW5pc2ggKFNwYWluKSIsImxh
+        bmd1YWdlX3JlZ2lvbl9jb2RlIjoic3BhLUVTIiwibGFuZ3VhZ2VfZGlyZWN0
+        aW9uIjoibGVmdCB0byByaWdodCJ9LHsibmFtZSI6IlN3YWhpbGkiLCJsYW5n
+        dWFnZV9yZWdpb25fY29kZSI6InN3YS1LRSIsImxhbmd1YWdlX2RpcmVjdGlv
+        biI6ImxlZnQgdG8gcmlnaHQifSx7Im5hbWUiOiJTd2VkaXNoIiwibGFuZ3Vh
+        Z2VfcmVnaW9uX2NvZGUiOiJzd2UtU0UiLCJsYW5ndWFnZV9kaXJlY3Rpb24i
+        OiJsZWZ0IHRvIHJpZ2h0In0seyJuYW1lIjoiVGFnYWxvZyIsImxhbmd1YWdl
+        X3JlZ2lvbl9jb2RlIjoidGdsLVBIIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoi
+        bGVmdCB0byByaWdodCJ9LHsibmFtZSI6IlRhbWlsIiwibGFuZ3VhZ2VfcmVn
+        aW9uX2NvZGUiOiJ0YW0tSU4iLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0
+        IHRvIHJpZ2h0In0seyJuYW1lIjoiVGhhaSIsImxhbmd1YWdlX3JlZ2lvbl9j
+        b2RlIjoidGhhLVRIIiwibGFuZ3VhZ2VfZGlyZWN0aW9uIjoibGVmdCB0byBy
+        aWdodCJ9LHsibmFtZSI6IlR1cmtpc2giLCJsYW5ndWFnZV9yZWdpb25fY29k
+        ZSI6InR1ci1UUiIsImxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQgdG8gcmln
+        aHQifSx7Im5hbWUiOiJVa3JhaW5pYW4iLCJsYW5ndWFnZV9yZWdpb25fY29k
+        ZSI6InVrci1VQSIsImxhbmd1YWdlX2RpcmVjdGlvbiI6ImxlZnQgdG8gcmln
+        aHQifSx7Im5hbWUiOiJWaWV0bmFtZXNlIiwibGFuZ3VhZ2VfcmVnaW9uX2Nv
+        ZGUiOiJ2aWUtVk4iLCJsYW5ndWFnZV9kaXJlY3Rpb24iOiJsZWZ0IHRvIHJp
+        Z2h0In1d
+    http_version: 
+  recorded_at: Wed, 25 May 2016 20:15:43 GMT
+- request:
+    method: post
+    uri: https://stagingapi.verbalizeit.com/v2/tasks
+    body:
+      encoding: UTF-8
+      string: media_resource_url=http%3A%2F%2Fvimeo.com%2F100265082&operation=video_transcription&source_language=eng-US&target_language=fra-FR
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Key:
+      - "<API KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - "*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match,Auth-User-Token"
+      Access-Control-Allow-Methods:
+      - POST, PUT, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - ''
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 25 May 2016 20:15:44 GMT
+      Etag:
+      - W/"6a6c300cd908ed49d1a2be28813e1771"
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Set-Cookie:
+      - XSRF-TOKEN=ITkKOzExrWmGxjG%2BTCNYSuaAjiYvNfEO8OjI9MykgH4mILD%2FeArH9DQb3juA6Nhzl4tC1B6epZg2gKJDOhl2MQ%3D%3D;
+        path=/
+      - _verbalizeit_session=WFp3OXc0emdCTVI3aDNZZTBZdnI0dXBtTEtqRkpkbUV5ZU1nYXpoU3FhWDlHVUJ4bXhIRkgyd2Nvdm5VL0hTNzhyZ093Q2dHTGxuSHJ5eElEU0l2bTdsRERKT3pFQjRRSlVuaGoxV2grNkQvK3V6Q0JNOGtyV28ycmpIbWFoZEpYT3NnNHFYZHRydDV1ODFzM2lCSm0ydklSeXdlZE5McW9PT1Y3d0V3cVlITlNaaGU3SjlJNW41aysrZDIvYTMyLS1QSUl4UTFXQVRuYWVKdis2Y2hjc1ZRPT0%3D--6203c99dca9094159f657cc926dfba793789d3bf;
+        domain=.verbalizeit.com; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 2c130ba4-9157-4fad-8b4d-d444a2dfac8a
+      X-Runtime:
+      - '2.756974'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"T2EB230","status":"preview","created_at":"2016-05-25T16:15:42.823-04:00","operation":"video_transcription","source_language":"eng-US","target_language":"fra-FR","price_currency":"usd","price_amount":56.47,"machine_first":false,"source_download_url":"https://stagingapi.verbalizeit.com/v2/tasks/T2EB230/source_file","source_filename":"100265082.srt","unit_count":242,"unit_type":"second","translation_units":0,"translation_units_complete":0,"special_instructions":null,"project_name":"None","url":"https://stagingapi.verbalizeit.com/v2/tasks/T2EB230","due_at":"2016-05-27T16:15:42.823-04:00","completed_at":null,"postback_url":null,"status_url":null,"rush_order":false,"translator":{},"reviewer":{}}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 20:15:46 GMT
+recorded_with: VCR 2.9.3

@@ -16,14 +16,14 @@ module Verbalizeit
         source_language: source_language,
         target_language: target_language,
         operation: operation,
-        file: options[:file],
-        media_resource_url: options[:media_resource_url],
-        start: "#{options[:start]}",
-        rush_order: "#{options[:rush_order]}",
-        postback_url: options[:postback_url],
-        status_url: options[:status_url],
-        special_instructions: options[:special_instructions]
       }
+      body[:file] = options[:file] if options[:file]
+      body[:media_resource_url] = options[:media_resource_url] if options[:media_resource_url]
+      body[:start] = "#{options[:start]}" if options[:start]
+      body[:rush_order] = "#{options[:rush_order]}" if options[:rush_order]
+      body[:postback_url] = options[:postback_url] if options[:postback_url]
+      body[:status_url] = options[:status_url] if options[:status_url]
+      body[:special_instructions] = options[:special_instructions] if options[:special_instructions]
 
       response = Typhoeus.post(tasks_url, body: body, headers: authorization_header)
 

@@ -166,6 +166,48 @@ describe Verbalizeit::Client do
       end
     end
 
+    it 'does not post with unnecessary options if they are nil' do
+      VCR.use_cassette('client/unnecessary_options') do
+        body = {
+          source_language: source_language,
+          target_language: target_language,
+          operation: video,
+          media_resource_url: media_resource_url
+        }
+
+        expect(Typhoeus).to receive(:post).with(
+          'https://stagingapi.verbalizeit.com/v2/tasks', {body: body, headers: {'x-api-key' => staging_api_key}}
+        ).and_call_original
+
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        options = {media_resource_url: media_resource_url}
+
+        client.create_task(source_language, target_language, video, options)
+      end
+    end
+
+    it 'does not post a media resource url if it is not present' do
+      VCR.use_cassette('client/unnecessary_options_media_resource_url') do
+        body = {
+          source_language: source_language,
+          target_language: target_language,
+          operation: operation,
+          file: file_xliff
+        }
+
+        expect(Typhoeus).to receive(:post).with(
+          'https://stagingapi.verbalizeit.com/v2/tasks', {body: body, headers: {'x-api-key' => staging_api_key}}
+        ).and_call_original
+
+        client = Verbalizeit::Client.new(staging_api_key, :staging)
+
+        options = {file: file_xliff}
+
+        client.create_task(source_language, target_language, operation, options)
+      end
+    end
+
   end
 
   describe 'list tasks' do
